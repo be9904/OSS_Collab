@@ -38,27 +38,31 @@
                 class="form-control"
                 id="name"
                 placeholder="이름을 입력하세요"
-            />
+            /> <!-- 여기도 id 있음-->
             <button
                 type="button"
-                id="add"
+                id=" search"
                 class="btn btn-primary ms-1 me-5 text-nowrap"
             >
                 <i class="bi bi-search"></i> Search
             </button>
         </div>
 
+        <div class="container mt-3" id="info">
+            <!-- search 했을 때 정보가 나오는 빈칸 container로 하긴 했는데 수정 가능 -->
+        </div>
+
         <div class="d-flex">
             <div class="flex-grow-1 bg-light rounded-2 p-2 me-1 w-50">
-              <div id="new">
+              <div id="new"> <!-- id는 새정보 추가는 new, 기존 정보 수정은 exist로 설정 -->
                 <div class="flex-grow-1 bg-light rounded-2 ms-5 me-2 mt-4">
                     <input
                         type="text"
                         class="form-control"
-                        id="name"
+                        id="name" 
                         placeholder="이름을 입력하세요"
                     />
-                </div>
+                </div> <!-- 입력하는 항목 id 전부 다 수정 필요 -->
 
                 <div class="flex-grow-1 bg-light rounded-2 ms-5 me-2 mt-4">
                     <input
@@ -98,6 +102,7 @@
                 </div>
               </div>
             </div>
+
             <div class="flex-grow-1 bg-light rounded-2 p-2 w-50">
               <div id="exist">
                 <div class="flex-grow-1 bg-light rounded-2 ms-2 me-5 mt-4">
@@ -150,9 +155,7 @@
           </div>
         </div>
 
-        <div class="container mt-4" id="info">
-            
-        </div>
+        
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
