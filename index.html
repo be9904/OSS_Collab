@@ -23,7 +23,7 @@
             }
         </style>
     </head>
-
++
     <body>
         <!-- HTML Code -->
         <nav class="navbar navbar-light bg-primary">
@@ -41,7 +41,7 @@
             /> <!-- 여기도 id 있음-->
             <button
                 type="button"
-                id=" search"
+                id="search"
                 class="btn btn-primary ms-1 me-5 text-nowrap"
             >
                 <i class="bi bi-search"></i> Search
@@ -59,7 +59,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="name" 
+                        id="new_name" 
                         placeholder="이름을 입력하세요"
                     />
                 </div> <!-- 입력하는 항목 id 전부 다 수정 필요 -->
@@ -68,7 +68,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="stock-name"
+                        id="new_stname"
                         placeholder="주식 종목명을 입력하세요"
                     />
                 </div>
@@ -77,7 +77,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="stock-name"
+                        id="stock_amount"
                         placeholder="주식 매수량을 입력하세요"
                     />
                 </div>
@@ -86,7 +86,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="stock-name"
+                        id="new_stprice"
                         placeholder="매수 당시 주가를 입력하세요"
                     />
                 </div>
@@ -94,7 +94,7 @@
                 <div class="flex-grow-1 bg-light rounded-2 ms-5 me-2 mt-4">
                     <button
                         type="button"
-                        id="add"
+                        id="new_add"
                         class="btn btn-primary ms-1 me-5 text-nowrap"
                     >
                         <i class="bi bi-plus"></i> Add
@@ -109,7 +109,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="name"
+                        id="exist_name"
                         placeholder="이름을 입력하세요"
                     />
                 </div>
@@ -118,7 +118,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="name"
+                        id="exist_stname"
                         placeholder="주식 종목명을 입력하세요"
                     />
                 </div>
@@ -127,7 +127,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="name"
+                        id="stock_change"
                         placeholder="추가 매수량 또는 매도량을 입력하세요"
                     />
                 </div>
@@ -136,7 +136,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        id="name"
+                        id="exist_stprice"
                         placeholder="당시 주가를 입력하세요"
                     />
                 </div>
@@ -144,15 +144,18 @@
                 <div class="flex-grow-1 bg-light rounded-2 ms-2 me-5 mt-4">
                     <button
                         type="button"
-                        id="add"
+                        id="exist_add"
                         class="btn btn-primary ms-1 me-5 text-nowrap"
                     >
                         <i class="bi bi-plus"></i> Add
                     </button>
                 </div>
-              </div>
+              </div>   
             </div>
           </div>
+          <div class="flex-grow-1 bg-light rounded-2 mt-4" style = "text-align:center;">
+            오늘은 <label id ="hours">0</label>:<label id="minutes">00</label>:<label id="seconds">00</label> 동안이나 보고 계셨군요
+        </div>
         </div>
 
         
@@ -162,6 +165,44 @@
             crossorigin="anonymous"
         ></script>
         <script>
+            var hoursLabel = document.getElementById("hours");
+            var minutesLabel = document.getElementById("minutes");
+            var secondsLabel = document.getElementById("seconds");
+            var totalSeconds = 0;
+            setInterval(setTime, 1000);
+            
+            function setTime() {
+                ++totalSeconds;
+                secondsLabel.innerHTML = pad(totalSeconds % 60);
+                if(pad(parseInt(totalSeconds / 60)) >= 60){
+                    minutesLabel.innerHTML = pad(parseInt((totalSeconds / 60) % 60));
+                    hoursLabel.innerHTML = pad(parseInt((totalSeconds / 60) / 60));
+                } else{
+                    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+                    hoursLabel.innerHTML = 0;
+                }
+
+                let seconds = parseInt(secondsLabel.innerHTML);
+                let minutes = parseInt(minutesLabel.innerHTML);
+                let hours = parseInt(hoursLabel.innerHTML);
+            
+                if(seconds === 0 && minutes === 0 && hours === 2){
+                    alert("이용하신지 2시간이 경과되었습니다.");
+                    window.close();
+                }
+
+            }
+
+            function pad(val) {
+                var valString = val + "";
+                if (valString.length < 2) {
+                    return "0" + valString;
+                } else {
+                    return valString;
+                }
+            }
+
+            
             /* JS Code */
         </script>
     </body>
