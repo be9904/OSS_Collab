@@ -181,6 +181,16 @@
                     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
                     hoursLabel.innerHTML = 0;
                 }
+
+                let seconds = parseInt(secondsLabel.innerHTML);
+                let minutes = parseInt(minutesLabel.innerHTML);
+                let hours = parseInt(hoursLabel.innerHTML);
+            
+                if(seconds === 0 && minutes === 0 && hours === 2){
+                    alert("이용하신지 2시간이 경과되었습니다.");
+                    window.close();
+                }
+
             }
 
             function pad(val) {
@@ -191,6 +201,8 @@
                     return valString;
                 }
             }
+
+            
             /* JS Code */
         </script>
     </body>
