@@ -150,9 +150,12 @@
                         <i class="bi bi-plus"></i> Add
                     </button>
                 </div>
-              </div>
+              </div>   
             </div>
           </div>
+          <div class="flex-grow-1 bg-light rounded-2 mt-4" style = "text-align:center;">
+            오늘은 <label id ="hours">0</label>:<label id="minutes">00</label>:<label id="seconds">00</label> 동안이나 보고 계셨군요
+        </div>
         </div>
 
         
@@ -162,6 +165,32 @@
             crossorigin="anonymous"
         ></script>
         <script>
+            var hoursLabel = document.getElementById("hours");
+            var minutesLabel = document.getElementById("minutes");
+            var secondsLabel = document.getElementById("seconds");
+            var totalSeconds = 0;
+            setInterval(setTime, 1000);
+            
+            function setTime() {
+                ++totalSeconds;
+                secondsLabel.innerHTML = pad(totalSeconds % 60);
+                if(pad(parseInt(totalSeconds / 60)) >= 60){
+                    minutesLabel.innerHTML = pad(parseInt((totalSeconds / 60) % 60));
+                    hoursLabel.innerHTML = pad(parseInt((totalSeconds / 60) / 60));
+                } else{
+                    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+                    hoursLabel.innerHTML = 0;
+                }
+            }
+
+            function pad(val) {
+                var valString = val + "";
+                if (valString.length < 2) {
+                    return "0" + valString;
+                } else {
+                    return valString;
+                }
+            }
             /* JS Code */
         </script>
     </body>
