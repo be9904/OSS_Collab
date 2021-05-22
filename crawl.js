@@ -27,7 +27,7 @@ https.get(
             let text = jsonarr[0].split("=");
 
             jsondata = JSON.parse(text[1].trim().slice(0, -1));
-            //console.log(jsondata);
+            console.log(jsondata);
         });
     }
 );
