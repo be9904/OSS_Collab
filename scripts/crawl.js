@@ -27,6 +27,8 @@ https.get(
 
             jsondata = JSON.parse(text[1].trim().slice(0, -1));
             console.log(jsondata);
+            console.log(jsondata.result.itemList);
+            console.log(typeof jsondata.result.itemList[1].nm);
         });
     }
 );
