@@ -1,5 +1,4 @@
 const https = require("https");
-const parser = require("node-html-parser");
 
 let url = "https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0";
 let jsondata;
