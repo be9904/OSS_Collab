@@ -6,6 +6,7 @@ let jsondata;
 let User_Agent =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.63";
 
+// 주식 종목 검색
 function search(input, data, length) {
     for (let i = 0; i < length; i++) {
         if (input === data.result.itemList[i].nm) {
@@ -17,6 +18,7 @@ function search(input, data, length) {
     return false;
 }
 
+// 시세 표기 시 천 단위에서 콤마로 끊어주는 함수
 function addComma(price) {
     let over = parseInt(price / 1000);
     let below = "";
@@ -35,17 +37,23 @@ function addComma(price) {
     price = over + "," + below;
     return price;
 }
+
+// 시가 총액 조단위 표기
 function convertMarketCapJ(input) {
     let j;
     j = parseInt(input / 10000);
     return j;
 }
+
+// 시가 총액 억단위 표기
 function convertMarketCapE(input) {
     let e;
     e = addComma(input);
     e = e.slice(e.length - 5, e.length);
     return e;
 }
+
+// 콘솔에 보기 쉽게 출력해주는 함수
 function fancyPrint(obj, price, index) {
     console.log("\n---------------------------------------------------");
     console.log(` 종목: ${obj.result.itemList[index].nm}`);
@@ -91,17 +99,23 @@ https.get(
             const open = require("open");
 
             let input = process.argv[2];
+
+            // 종목 검색
             let index = search(
                 input,
                 jsondata,
                 jsondata.result.itemList.length
             );
+
+            // 일치하는 결과 있을 때
             if (index !== false) {
                 let price = jsondata.result.itemList[index].nv;
-                price = addComma(price);
+                price = addComma(price); // 시세에 콤마 표시
 
-                // console.log(`현재 ${input}의 시세는 ${price}원입니다.`);
+                // 결과 출력
                 fancyPrint(jsondata, price, index);
+
+                // 사이트 접속 o
                 if (process.argv[3] === "yes" || process.argv[3] === "y") {
                     console.log(
                         "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
@@ -109,16 +123,22 @@ https.get(
                     setTimeout(() => {
                         open("https://finance.naver.com/main/main.nhn"); // github pages link goes here
                     }, 3000);
-                } else {
+                }
+
+                // 사이트 접속 x
+                else {
                     console.log(
                         "잘 생각하셨습니다. 주식에 신경 끄시고 하던 과제나 마저 하시길 바랍니다.\n"
                     );
                 }
-            } else {
+            }
+
+            //일치하는 결과 없을 때
+            else {
                 console.log(
-                    "검색하신 주식은 현재 찾을 수 없습니다. 종목 이름을 다시 확인해주세요.\n"
+                    "\n검색하신 주식은 현재 찾을 수 없습니다. 종목 이름을 다시 확인해주세요.\n"
                 );
             }
-        }); // end
+        });
     }
 );
