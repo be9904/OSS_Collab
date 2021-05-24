@@ -1,5 +1,23 @@
 {
-  "dependencies": {
-    "node-html-parser": "^3.3.0"
-  }
+    "dependencies": {
+        "open": "^8.1.0"
+    },
+    "name": "stockchecker",
+    "description": "this will help you to stop wasting your time watching a stock chart",
+    "version": "1.0.0",
+    "main": "backend.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/be9904/OSS_Collab.git"
+    },
+    "author": "oss_group7",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/be9904/OSS_Collab/issues"
+    },
+    "homepage": "https://github.com/be9904/OSS_Collab#readme"
 }
