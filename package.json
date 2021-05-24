@@ -5,7 +5,9 @@
     "name": "stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
     "version": "1.0.0",
-    "main": "backend.js",
+    "bin": {
+        "stock": "./cli.js"
+    },
     "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

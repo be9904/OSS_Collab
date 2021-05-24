@@ -10,7 +10,7 @@
 
 ```JS
 npm install --save
-npm stockchecker <stockName> <yes/no>
+npm stock <stockName> <yes/no>
 ```
 
 # Links to resources
@@ -33,7 +33,7 @@ npm install --save open
 # Examples
 
 Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line Interface이고, 나머지 하나는 Web app입니다.
-우선 CLI에서는 npm stockchecker <주식종목> <yes/no> 를 입력함으로써 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
+우선 CLI에서는 npm stock <주식종목> <yes/no> 를 입력함으로써 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 <br>
 Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정보갱신을 할 수 있습니다.
 

@@ -1,4 +1,6 @@
-//const crawl = require("./crawl");
+#!/usr/bin/env node
+
+const crawl = require("./crawl");
 const open = require("open");
 
 let input = process.argv[2];

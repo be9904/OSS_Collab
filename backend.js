@@ -80,9 +80,6 @@ button_search.addEventListener("click", () => {
         "d-flex-grow-1 align-items-center bg-light rounded-2 p-2 outer";
     addSpanChild(div, s_idx);
 
-    let show_area = document.querySelector("#info");
-    show_area.appendChild(div);
-
     let buttonRemove = document.createElement("button");
     buttonRemove.className = "btn btn-sm btn-danger";
     buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
@@ -91,6 +88,9 @@ button_search.addEventListener("click", () => {
     buttonRemove.addEventListener("click", () => {
         div.remove();
     });
+
+    let show_area = document.querySelector("#info");
+    show_area.appendChild(div);
 });
 
 //정보추가 버튼 - #new_add
@@ -165,6 +165,4 @@ button_existadd.addEventListener("click", () => {
     }
     user_list[t_idx].total += change * price;
     user_list[t_idx].stock_amount = original_amount + change;
-
-    //let open = window.open("./window.html");
 });
