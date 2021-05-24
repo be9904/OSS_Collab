@@ -6,7 +6,6 @@ let jsondata;
 let User_Agent =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.63";
 
-function getPrice(input) {}
 function search(input, data, length) {
     for (let i = 0; i < length; i++) {
         if (input === data.result.itemList[i].nm) {
@@ -103,7 +102,6 @@ https.get(
 
                 // console.log(`현재 ${input}의 시세는 ${price}원입니다.`);
                 fancyPrint(jsondata, price, index);
-
                 if (process.argv[3] === "yes" || process.argv[3] === "y") {
                     console.log(
                         "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
