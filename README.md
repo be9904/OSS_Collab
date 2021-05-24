@@ -14,6 +14,8 @@ npm stockchecker <stockName> <yes/no>
 ```
 
 # Links to resources
+- 네이버 증권: https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0
+- npm open: https://www.npmjs.com/package/open
 
 # Installation
 

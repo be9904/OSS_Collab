@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const https = require("https");
 
 let url = "https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0";

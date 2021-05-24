@@ -14,6 +14,9 @@
         "type": "git",
         "url": "git+https://github.com/be9904/OSS_Collab.git"
     },
+    "bin": {
+        "stockchecker": "./cli.js"
+    },
     "author": "oss_group7",
     "license": "MIT",
     "bugs": {
