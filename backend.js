@@ -39,21 +39,12 @@ function getAvgPrice(user) {
     user["stock_price"] = avg_price;
 }
 
-/* 레거시
-function getMarginSearch(user) {
-    let price = parseInt(user["current_price"]);
-    let amount = parseInt(user.stock_amount);
-    let avg_price = parseInt(user.total) / amount;
-    let margin = (price - avg_price) * amount;
-    return margin;
-}
-*/
 function addSpanChild(div, idx) {
     let target = user_list[idx];
     let child = document.createElement("span");
-    child.className = "me-4";
+    child.className = "me-auto";
     child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
-    div.appendChild(child);
+    return child;
 }
 
 let button_search = document.querySelector("#search");
@@ -66,25 +57,26 @@ button_search.addEventListener("click", () => {
         clear("#name");
         return;
     }
+
     let s_idx = getIndex(name);
-    //레거시
-    //let current_price = getAvgPrice(user_list[s_idx]);
-    //user_list[s_idx]["current_price"] = current_price;
-    //let margin = getMarginSearch(user_list[s_idx]);
-    //user_list[s_idx]["margin"] = margin;
 
     //html document element 만들고 추가
     let div = document.createElement("div");
     div.className =
         "d-flex-grow-1 align-items-center bg-light rounded-2 p-2 outer";
-    addSpanChild(div, s_idx);
 
-    let buttonRemove = document.createElement("button");
-    buttonRemove.className = "btn btn-sm btn-danger";
-    buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
-    div.appendChild(buttonRemove);
+    let target = user_list[s_idx];
+    let child = document.createElement("span");
+    child.className = "me-auto";
+    child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
+    div.appendChild(child);
 
-    buttonRemove.addEventListener("click", () => {
+    let Remove = document.createElement("span");
+    Remove.className = "remove";
+    Remove.textContent = "삭제";
+    div.appendChild(Remove);
+
+    Remove.addEventListener("click", () => {
         div.remove();
     });
 
@@ -109,15 +101,20 @@ searchEnter.addEventListener("keyup", (event) => {
         //html document element 만들고 추가
         let div = document.createElement("div");
         div.className =
-            "d-flex-grow-1 align-items-center bg-light rounded-2 p-2 outer";
-        addSpanChild(div, s_idx);
+            "d-flex align-items-center bg-light rounded-2 p-2 outer";
+        let target = user_list[s_idx];
+        let child = document.createElement("span");
+        child.className = "me-auto";
+        child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
+        div.appendChild(child);
+        console.log(target);
 
-        let buttonRemove = document.createElement("button");
-        buttonRemove.className = "btn btn-sm btn-danger";
-        buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
-        div.appendChild(buttonRemove);
+        let Remove = document.createElement("div");
+        Remove.className = "remove";
+        Remove.textContent = "삭제";
+        div.appendChild(Remove);
 
-        buttonRemove.addEventListener("click", () => {
+        Remove.addEventListener("click", () => {
             div.remove();
         });
 
@@ -315,7 +312,6 @@ amendEnter.addEventListener("keyup", (event) => {
             console.log(user_list);
             return;
         }
-    
 
         let t_idx = getIndex(getname);
         let original_amount = parseInt(user_list[t_idx].stock_amount);
@@ -343,6 +339,6 @@ amendEnter.addEventListener("keyup", (event) => {
         clear("#exist_name");
         clear("#exist_stname");
         clear("#stock_change");
-        clear("#exist_stprice");  
+        clear("#exist_stprice");
     }
 });
