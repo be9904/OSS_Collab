@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let user = {
     /*
     user_name,

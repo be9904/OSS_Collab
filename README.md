@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # A brief overview
 
 여러분들은 주식투자를 하면서 변동하는 주가에 일희일비 하고 있지 않으신가요? 혹은 기업의 가치를 보고 장기투자를 하겠다는 마음을 먹었지만 실상은 하던 과제를 제쳐두고 단타 치기에 몰두하고 있진 않은가요? Stock checker는 시시때때로 주식 차트만 바라보며 시간낭비 하는 당신이 장기투자를 할 수 있도록 도와줄 것입니다.
@@ -42,7 +43,7 @@ Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line In
 ```JS
 npm install -g oss-stockchecker
 npm install --save open
-npm stockc <주식종목> <yes/no>
+npm stock <주식종목> <yes/no>
 ```
 
 프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.

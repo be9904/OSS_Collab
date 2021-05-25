@@ -2,12 +2,9 @@
     "dependencies": {
         "open": "^8.1.0"
     },
-    "name": "stockchecker",
+    "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
     "version": "1.0.0",
-    "bin": {
-        "stock": "./cli.js"
-    },
     "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +13,9 @@
         "type": "git",
         "url": "git+https://github.com/be9904/OSS_Collab.git"
     },
+    "bin": {
+        "stock": "./cli.js"
+    },
     "author": "oss_group7",
     "license": "MIT",
     "bugs": {
@@ -23,3 +23,4 @@
     },
     "homepage": "https://github.com/be9904/OSS_Collab#readme"
 }
+>>>>>>> 4bba16ece73a937f8af87f014f323e61e47838fb
