@@ -9,11 +9,14 @@
 ### Quick Start
 
 ```JS
-npm install --save
-npm stock <stockName> <yes/no>
+npm install -g stockchecker
+npm install --save open
+npm stockchecker <stockName> <yes/no>
 ```
 
 # Links to resources
+- 네이버 증권: https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0
+- npm open: https://www.npmjs.com/package/open
 
 # Installation
 
@@ -33,7 +36,7 @@ npm install --save open
 # Examples
 
 Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line Interface이고, 나머지 하나는 Web app입니다.
-우선 CLI에서는 npm stock <주식종목> <yes/no> 를 입력함으로써 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
+우선 CLI에서는 npm stockchecker <주식종목> <yes/no> 를 입력함으로써 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 <br>
 Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정보갱신을 할 수 있습니다.
 
@@ -107,6 +110,3 @@ SOFTWARE.
 -   주류 의견에 배치되는 의견도 환영하며 우리는 그 의견을 존중할 것이다. 또한 참여자들의 피드백을 감사히 받아들일 것이다.
 -   불만을 얘기하는 사람에게 불합리한 조치는 없을 것이며, 그 어떠한 보복도 엄격하게 금지한다.
 
-```
-
-```

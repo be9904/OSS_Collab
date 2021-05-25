@@ -1,5 +1,3 @@
-//const crawl = require("./crawl");
-
 let user = {
     /*
     user_name,
