@@ -9,8 +9,8 @@
 ### Quick Start
 
 ```JS
-npm install -g oss-stockchecker
 npm install --save open
+npm install -g oss-stockchecker
 stock <stockName> <yes/no>
 ```
 
@@ -40,8 +40,8 @@ Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line In
 우선 CLI 환경에서 Stock Checker를 이용하기 위해서는 아래의 명령어를 따라 치시면 됩니다.
 
 ```JS
-npm install -g oss-stockchecker
 npm install --save open
+npm install -g oss-stockchecker
 stock <stockName> <yes/no>
 ```
 
@@ -84,7 +84,7 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 # Release
 
-## oss-stockchecker 1.0.4
+## oss-stockchecker 1.0.6
 
 # How to contribute
 

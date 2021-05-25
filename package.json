@@ -1,7 +1,7 @@
 {
     "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
