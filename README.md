@@ -12,7 +12,7 @@
 ```JS
 npm install -g oss-stockchecker
 npm install --save open
-npm stock <stockName> <yes/no>
+stock <stockName> <yes/no>
 ```
 
 # Links to resources
@@ -43,7 +43,7 @@ Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line In
 ```JS
 npm install -g oss-stockchecker
 npm install --save open
-npm stock <주식종목> <yes/no>
+stock <stockName> <yes/no>
 ```
 
 프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
