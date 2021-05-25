@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const https = require("https");
+const open = require("open");
 
 let url = "https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0";
 let jsondata;
@@ -102,8 +103,6 @@ https.get(
             /////////////////////////////////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////
 
-            const open = require("open");
-
             let input = process.argv[2];
             if (process.argv[2] === "list") {
                 console.log("\n조회 가능한 종목 목록입니다.\n");
@@ -132,7 +131,7 @@ https.get(
                             "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
                         );
                         setTimeout(() => {
-                            open("index.html"); // github pages link goes here
+                            open("https://be9904.github.io/OSS_Collab/"); // github pages link goes here
                         }, 3000);
                     }
 
