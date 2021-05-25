@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const https = require("https");
+const open = require("open");
 
 let url = "https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0";
 let jsondata;
@@ -101,8 +102,6 @@ https.get(
             /////////////////////////////////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////
-
-            const open = require("open");
 
             let input = process.argv[2];
             if (process.argv[2] === "list") {
