@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # A brief overview
 
 여러분들은 주식투자를 하면서 변동하는 주가에 일희일비 하고 있지 않으신가요? 혹은 기업의 가치를 보고 장기투자를 하겠다는 마음을 먹었지만 실상은 하던 과제를 제쳐두고 단타 치기에 몰두하고 있진 않은가요? Stock checker는 시시때때로 주식 차트만 바라보며 시간낭비 하는 당신이 장기투자를 할 수 있도록 도와줄 것입니다.
@@ -9,13 +10,15 @@
 ### Quick Start
 
 ```JS
-npm install --save
-npm stockchecker <stockName> <yes/no>
+npm install -g oss-stockchecker
+npm install --save open
+stock <stockName> <yes/no>
 ```
 
 # Links to resources
-- 네이버 증권: https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0
-- npm open: https://www.npmjs.com/package/open
+
+-   네이버 증권: https://m.stock.naver.com/sise/siseList.nhn?menu=market_sum&sosok=0
+-   npm open: https://www.npmjs.com/package/open
 
 # Installation
 
@@ -35,7 +38,15 @@ npm install --save open
 # Examples
 
 Stock checker는 크게 두 부분으로 나뉩니다. 하나는 Command Line Interface이고, 나머지 하나는 Web app입니다.
-우선 CLI에서는 npm stockchecker <주식종목> <yes/no> 를 입력함으로써 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
+우선 CLI 환경에서 Stock Checker를 이용하기 위해서는 아래의 명령어를 따라 치시면 됩니다.
+
+```JS
+npm install -g oss-stockchecker
+npm install --save open
+stock <stockName> <yes/no>
+```
+
+프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 <br>
 Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정보갱신을 할 수 있습니다.
 
@@ -43,13 +54,13 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 <!--맨위 search부분 사진-->
 
-위의 input box에 사용자의 이름을 입력하면 localStorage에 저장된 정보를 조회하여 사용자가 보유한 주식 종목명, 시세, 수익을 보여줍니다. x버튼을 누르면 조회된 정보 기록을 삭제할 수 있습니다.
+위의 input box에 사용자의 이름을 입력하면 localStorage에 저장된 정보를 조회하여 사용자가 보유한 주식 종목명, 시세, 수익을 보여줍니다. 삭제를 누르면 조회된 정보 기록을 삭제할 수 있습니다.
 
 ### 2. 정보추가
 
 <!--정보추가 부분 사진-->
 
-처음 Stock checker를 이용하는 사용자라면 정보추가를 먼저 해줘야 합니다. 위의 사진에 보이는 input box에 내용을 입력하고 추가를 하면 됩니다.
+처음 Stock checker를 이용하는 사용자라면 정보추가를 먼저 해줘야 합니다. 위의 사진에 보이는 input box에 내용을 입력하고 추가를 하면 됩니다. 빈 칸을 다 채워줘야 하며 다 채우지 않을 시에는 정보가 추가되지 않습니다.
 
 ### 3. 정보갱신
 
@@ -67,7 +78,7 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 # Release
 
-## stockchecker 1.0.0
+## oss-stockchecker 1.0.1
 
 # How to contribute
 
@@ -108,7 +119,3 @@ SOFTWARE.
 -   우리는 모욕적인 행동, 경멸적인 농담이나 언급, 원치 않는 성적인 접근과 같이 다른 사람에게 공격적이거나 적대적인 근무환경을 조성하고 모욕적인 발언으로 해를 가하는 그 어떠한 말이나 행동을 용인하지 않는다.
 -   주류 의견에 배치되는 의견도 환영하며 우리는 그 의견을 존중할 것이다. 또한 참여자들의 피드백을 감사히 받아들일 것이다.
 -   불만을 얘기하는 사람에게 불합리한 조치는 없을 것이며, 그 어떠한 보복도 엄격하게 금지한다.
-
-```
-
-```
