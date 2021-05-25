@@ -67,7 +67,7 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 # Release
 
-## stockchecker 1.0.0
+## stockchecker 1.0.2
 
 # How to contribute
 

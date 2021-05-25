@@ -57,12 +57,16 @@ function convertMarketCapE(input) {
 
 // 콘솔에 보기 쉽게 출력해주는 함수
 function fancyPrint(obj, price, index) {
+    let change = obj.result.itemList[index].cr;
+    if (obj.result.itemList[index].cr > 0) {
+        change = "+" + change;
+    }
     console.log("\n---------------------------------------------------");
     console.log(` 종목: ${obj.result.itemList[index].nm}`);
     console.log("---------------------------------------------------");
     console.log(` 시세: ${price} 원`);
     console.log("---------------------------------------------------");
-    console.log(` 등락률: ${obj.result.itemList[index].cr} %`);
+    console.log(` 등락률: ${change} %`);
     console.log("---------------------------------------------------");
     console.log(
         ` 시가총액: ${convertMarketCapJ(
@@ -92,7 +96,7 @@ https.get(
             let text = jsonarr[0].split("=");
 
             jsondata = JSON.parse(text[1].trim().slice(0, -1));
-            // console.log(jsondata);
+            //console.log(jsondata.result.itemList);
 
             /////////////////////////////////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////
@@ -101,45 +105,52 @@ https.get(
             const open = require("open");
 
             let input = process.argv[2];
+            if (process.argv[2] === "list") {
+                console.log("조회 가능한 종목 목록입니다.\n");
+                for (let i = 0; i < jsondata.result.itemList.length; i++) {
+                    console.log(jsondata.result.itemList[i].nm);
+                }
+                console.log("\n");
+            } else {
+                // 종목 검색
+                let index = search(
+                    input,
+                    jsondata,
+                    jsondata.result.itemList.length
+                );
 
-            // 종목 검색
-            let index = search(
-                input,
-                jsondata,
-                jsondata.result.itemList.length
-            );
+                // 일치하는 결과 있을 때
+                if (index !== false) {
+                    let price = jsondata.result.itemList[index].nv;
+                    price = addComma(price); // 시세에 콤마 표시
 
-            // 일치하는 결과 있을 때
-            if (index !== false) {
-                let price = jsondata.result.itemList[index].nv;
-                price = addComma(price); // 시세에 콤마 표시
+                    // 결과 출력
+                    fancyPrint(jsondata, price, index);
 
-                // 결과 출력
-                fancyPrint(jsondata, price, index);
+                    // 사이트 접속 o
+                    if (process.argv[3] === "yes" || process.argv[3] === "y") {
+                        console.log(
+                            "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
+                        );
+                        setTimeout(() => {
+                            open("index3min.html"); // github pages link goes here
+                        }, 3000);
+                    }
 
-                // 사이트 접속 o
-                if (process.argv[3] === "yes" || process.argv[3] === "y") {
-                    console.log(
-                        "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
-                    );
-                    setTimeout(() => {
-                        open("index3min.html"); // github pages link goes here
-                    }, 3000);
+                    // 사이트 접속 x
+                    else {
+                        console.log(
+                            "잘 생각하셨습니다. 주식에 신경 끄시고 하던 과제나 마저 하시길 바랍니다.\n"
+                        );
+                    }
                 }
 
-                // 사이트 접속 x
+                //일치하는 결과 없을 때
                 else {
                     console.log(
-                        "잘 생각하셨습니다. 주식에 신경 끄시고 하던 과제나 마저 하시길 바랍니다.\n"
+                        "\n검색하신 주식은 현재 찾을 수 없습니다. 종목 이름을 다시 확인해주세요.\n"
                     );
                 }
-            }
-
-            //일치하는 결과 없을 때
-            else {
-                console.log(
-                    "\n검색하신 주식은 현재 찾을 수 없습니다. 종목 이름을 다시 확인해주세요.\n"
-                );
             }
         });
     }

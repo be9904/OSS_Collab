@@ -4,7 +4,7 @@
     },
     "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "main": "backend.js",
     "devDependencies": {},
     "scripts": {
