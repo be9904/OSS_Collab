@@ -6,6 +6,11 @@
 <br>
 Stock checker는 주식투자를 하고 있는 소프트웨어학과 학생들을 위해 최적화되어 있습니다. 소프트웨어학과 학생 여러분, 이젠 Stock checker를 활용하여 주식에 시간 낭비 하지 마시고 마음껏 여러분들의 과제에 집중하시기 바랍니다.
 
+
+
+<img src="https://user-images.githubusercontent.com/65922112/119496019-04539100-bd9e-11eb-9372-4268012e91c3.png" width="600">
+
+
 ### Quick Start
 
 ```JS
@@ -45,6 +50,11 @@ npm install -g oss-stockchecker
 stock <stockName> <yes/no>
 ```
 
+
+<img src="https://user-images.githubusercontent.com/65922112/119500964-5814a900-bda3-11eb-9905-f283c8271368.png" width="400">
+
+
+
 프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 
 조회하고 싶은 주식 종목의 목록을 보기 위해서는 다음의 명령어를 실행해주시면 됩니다.
@@ -53,34 +63,54 @@ stock <stockName> <yes/no>
 stock list
 ```
 
+
+<img src="https://user-images.githubusercontent.com/65922112/119500796-256ab080-bda3-11eb-9ca3-4ef70dcf21c7.png" width="400">
+
 <br>
 Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정보갱신을 할 수 있습니다.
 
 ### 1. 정보조회
 
 <!--맨위 search부분 사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497296-5ea12180-bd9f-11eb-93d8-e0e4378e2031.png" width="600">
 
 위의 input box에 사용자의 이름을 입력하면 localStorage에 저장된 정보를 조회하여 사용자가 보유한 주식 종목명, 시세, 수익을 보여줍니다. 삭제를 누르면 조회된 정보 기록을 삭제할 수 있습니다.
 
 ### 2. 정보추가
 
 <!--정보추가 부분 사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497420-84c6c180-bd9f-11eb-9c4c-83f53234229a.png" width="400">
 
 처음 Stock checker를 이용하는 사용자라면 정보추가를 먼저 해줘야 합니다. 위의 사진에 보이는 input box에 내용을 입력하고 추가를 하면 됩니다. 빈 칸을 다 채워줘야 하며 다 채우지 않을 시에는 정보가 추가되지 않습니다.
 
 ### 3. 정보갱신
 
 <!--정보갱신 부분사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497494-9b6d1880-bd9f-11eb-93a5-bdd3f4e4f90c.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/65922112/119497520-a627ad80-bd9f-11eb-95fc-793845db2a28.png" width="500">
 
 기존 사용자의 정보를 변경하고자 할 경우 위의 내용을 입력하고 추가하면 됩니다. 예를 들어 홍길동 사용자가 삼성전자 주식을 5주 추가로 매수했다면 차례대로 홍길동, 삼성전자, 5, 84000을 입력하면 되고, 반대로 5주를 매도했다면 홍길동, 삼성전자, -5, 87000을 입력하면 됩니다. 사용자의 정보를 삭제하고 싶을 때는 이름을 입력하고 '추가 매수량 또는 매도량'을 입력하는 부분에 0을 넣어주면 됩니다.
 
 #### 사진 1. 기존 정보 조회
 
+<img src="https://user-images.githubusercontent.com/65922112/119497963-16ceca00-bda0-11eb-9d9e-b6eef03a355f.png" width="700">
+
+
 <!--저장되어 있는 정보를 조회한 사진-->
 
 #### 사진 2. 정보 삭제 후 다시 정보 조회
 
+
+<img src="https://user-images.githubusercontent.com/65922112/119498030-29490380-bda0-11eb-8018-16dd056e5c9d.png" width="400">
+
+
+<img src="https://user-images.githubusercontent.com/65922112/119498144-441b7800-bda0-11eb-8b1f-6dc2f797ee1b.png" width="700">
 <!--삭제 후 정보를 조회한 사진-->
+
+### 시연 연상 링크
+
+https://youtu.be/OybW0K935mY
 
 # Release
 
