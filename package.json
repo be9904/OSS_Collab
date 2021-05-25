@@ -2,7 +2,7 @@
     "dependencies": {
         "open": "^8.1.0"
     },
-    "name": "stockchecker",
+    "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
     "version": "1.0.0",
     "main": "backend.js",
@@ -15,7 +15,7 @@
         "url": "git+https://github.com/be9904/OSS_Collab.git"
     },
     "bin": {
-        "stockchecker": "./cli.js"
+        "stock": "./cli.js"
     },
     "author": "oss_group7",
     "license": "MIT",
