@@ -131,7 +131,7 @@ https.get(
                             "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
                         );
                         setTimeout(() => {
-                            open("index.html"); // github pages link goes here
+                            open("https://be9904.github.io/OSS_Collab/"); // github pages link goes here
                         }, 3000);
                     }
 
