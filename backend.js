@@ -39,14 +39,6 @@ function getAvgPrice(user) {
     user["stock_price"] = avg_price;
 }
 
-function addSpanChild(div, idx) {
-    let target = user_list[idx];
-    let child = document.createElement("span");
-    child.className = "me-auto";
-    child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
-    return child;
-}
-
 let button_search = document.querySelector("#search");
 button_search.addEventListener("click", () => {
     let name_box = document.querySelector("#name");
@@ -68,7 +60,7 @@ button_search.addEventListener("click", () => {
     let target = user_list[s_idx];
     let child = document.createElement("span");
     child.className = "me-auto";
-    child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
+    child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 매수 가격은 ${target["stock_price"]}원, ${target["stock_amount"]}주 보유하고 있습니다.`;
     div.appendChild(child);
 
     let Remove = document.createElement("span");
@@ -105,7 +97,7 @@ searchEnter.addEventListener("keyup", (event) => {
         let target = user_list[s_idx];
         let child = document.createElement("span");
         child.className = "me-auto";
-        child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 현재 가격은 ${target["current_price"]}, ${target["amount"]}주 보유하고 있습니다.`;
+        child.textContent = `${target["user_name"]}님의 주식 ${target["stock_name"]}의 정보: 매수 가격은 ${target["stock_price"]}원, ${target["stock_amount"]}주 보유하고 있습니다.`;
         div.appendChild(child);
         console.log(target);
 
@@ -167,6 +159,10 @@ button_newadd.addEventListener("click", () => {
     }
     user["stock_price"] = price;
 
+    if (isNaN(price) || isNaN(amount)) {
+        alert("숫자를 입력해주세요.");
+        return;
+    }
     user["total"] = parseInt(price) * parseInt(amount);
 
     user_list.push(user);
@@ -208,6 +204,10 @@ addEnter.addEventListener("keyup", (event) => {
         }
         user["stock_price"] = price;
 
+        if (isNaN(price) || isNaN(amount)) {
+            alert("숫자를 입력해주세요.");
+            return;
+        }
         user["total"] = parseInt(price) * parseInt(amount);
 
         user_list.push(user);
