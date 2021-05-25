@@ -1,10 +1,7 @@
 {
-    "dependencies": {
-        "open": "^8.1.0"
-    },
     "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +18,8 @@
     "bugs": {
         "url": "https://github.com/be9904/OSS_Collab/issues"
     },
-    "homepage": "https://github.com/be9904/OSS_Collab#readme"
+    "homepage": "https://github.com/be9904/OSS_Collab#readme",
+    "dependencies": {
+        "open": "^8.2.0"
+    }
 }
->>>>>>> 4bba16ece73a937f8af87f014f323e61e47838fb
