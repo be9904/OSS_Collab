@@ -63,31 +63,40 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 ### 1. 정보조회
 
 <!--맨위 search부분 사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497296-5ea12180-bd9f-11eb-93d8-e0e4378e2031.png" width="600">
 
 위의 input box에 사용자의 이름을 입력하면 localStorage에 저장된 정보를 조회하여 사용자가 보유한 주식 종목명, 시세, 수익을 보여줍니다. 삭제를 누르면 조회된 정보 기록을 삭제할 수 있습니다.
 
 ### 2. 정보추가
 
 <!--정보추가 부분 사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497420-84c6c180-bd9f-11eb-9c4c-83f53234229a.png" width="400">
 
 처음 Stock checker를 이용하는 사용자라면 정보추가를 먼저 해줘야 합니다. 위의 사진에 보이는 input box에 내용을 입력하고 추가를 하면 됩니다. 빈 칸을 다 채워줘야 하며 다 채우지 않을 시에는 정보가 추가되지 않습니다.
 
 ### 3. 정보갱신
 
 <!--정보갱신 부분사진-->
+<img src="https://user-images.githubusercontent.com/65922112/119497494-9b6d1880-bd9f-11eb-93a5-bdd3f4e4f90c.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/65922112/119497520-a627ad80-bd9f-11eb-95fc-793845db2a28.png" width="600">
 
 기존 사용자의 정보를 변경하고자 할 경우 위의 내용을 입력하고 추가하면 됩니다. 예를 들어 홍길동 사용자가 삼성전자 주식을 5주 추가로 매수했다면 차례대로 홍길동, 삼성전자, 5, 84000을 입력하면 되고, 반대로 5주를 매도했다면 홍길동, 삼성전자, -5, 87000을 입력하면 됩니다. 사용자의 정보를 삭제하고 싶을 때는 이름을 입력하고 '추가 매수량 또는 매도량'을 입력하는 부분에 0을 넣어주면 됩니다.
 
 #### 사진 1. 기존 정보 조회
 
-<img src="https://user-images.githubusercontent.com/65922112/119486908-b76abd00-bd93-11eb-86d3-d9a378662214.png" width="700">
+<img src="https://user-images.githubusercontent.com/65922112/119497963-16ceca00-bda0-11eb-9d9e-b6eef03a355f.png" width="700">
+
+
 <!--저장되어 있는 정보를 조회한 사진-->
 
 #### 사진 2. 정보 삭제 후 다시 정보 조회
 
-<img src="https://user-images.githubusercontent.com/65922112/119486988-d406f500-bd93-11eb-8f7b-22e58bf2e880.png" width="500">
 
-<img src="https://user-images.githubusercontent.com/65922112/119487035-e08b4d80-bd93-11eb-840a-a4d75896f9a7.png" width="700">
+<img src="https://user-images.githubusercontent.com/65922112/119498030-29490380-bda0-11eb-8018-16dd056e5c9d.png" width="400">
+
+
+<img src="https://user-images.githubusercontent.com/65922112/119498144-441b7800-bda0-11eb-8b1f-6dc2f797ee1b.png" width="700">
 <!--삭제 후 정보를 조회한 사진-->
 
 ### 시연 연상 링크
