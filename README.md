@@ -6,6 +6,10 @@
 <br>
 Stock checker는 주식투자를 하고 있는 소프트웨어학과 학생들을 위해 최적화되어 있습니다. 소프트웨어학과 학생 여러분, 이젠 Stock checker를 활용하여 주식에 시간 낭비 하지 마시고 마음껏 여러분들의 과제에 집중하시기 바랍니다.
 
+
+<img src="https://user-images.githubusercontent.com/65922112/119496019-04539100-bd9e-11eb-9372-4268012e91c3.png" width="600">
+
+
 ### Quick Start
 
 ```JS
@@ -76,10 +80,14 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 #### 사진 1. 기존 정보 조회
 
+<img src="https://user-images.githubusercontent.com/65922112/119486908-b76abd00-bd93-11eb-86d3-d9a378662214.png" width="700">
 <!--저장되어 있는 정보를 조회한 사진-->
 
 #### 사진 2. 정보 삭제 후 다시 정보 조회
 
+<img src="https://user-images.githubusercontent.com/65922112/119486988-d406f500-bd93-11eb-8f7b-22e58bf2e880.png" width="500">
+
+<img src="https://user-images.githubusercontent.com/65922112/119487035-e08b4d80-bd93-11eb-840a-a4d75896f9a7.png" width="700">
 <!--삭제 후 정보를 조회한 사진-->
 
 # Release
