@@ -1,6 +1,6 @@
 {
     "dependencies": {
-        "open": "^8.1.0"
+        "open": "^8.2.0"
     },
     "name": "oss-stockchecker",
     "description": "this will help you to stop wasting your time watching a stock chart",
@@ -23,4 +23,3 @@
     },
     "homepage": "https://github.com/be9904/OSS_Collab#readme"
 }
->>>>>>> 4bba16ece73a937f8af87f014f323e61e47838fb
