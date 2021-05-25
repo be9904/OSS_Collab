@@ -84,7 +84,7 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 # Release
 
-## oss-stockchecker 1.0.6
+## oss-stockchecker 1.0.7
 
 # How to contribute
 
