@@ -7,6 +7,7 @@
 Stock checker는 주식투자를 하고 있는 소프트웨어학과 학생들을 위해 최적화되어 있습니다. 소프트웨어학과 학생 여러분, 이젠 Stock checker를 활용하여 주식에 시간 낭비 하지 마시고 마음껏 여러분들의 과제에 집중하시기 바랍니다.
 
 
+
 <img src="https://user-images.githubusercontent.com/65922112/119496019-04539100-bd9e-11eb-9372-4268012e91c3.png" width="600">
 
 
@@ -49,6 +50,11 @@ npm install -g oss-stockchecker
 stock <stockName> <yes/no>
 ```
 
+
+<img src="https://user-images.githubusercontent.com/65922112/119500964-5814a900-bda3-11eb-9905-f283c8271368.png" width="400">
+
+
+
 프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 
 조회하고 싶은 주식 종목의 목록을 보기 위해서는 다음의 명령어를 실행해주시면 됩니다.
@@ -56,6 +62,9 @@ stock <stockName> <yes/no>
 ```JS
 stock list
 ```
+
+
+<img src="https://user-images.githubusercontent.com/65922112/119500796-256ab080-bda3-11eb-9ca3-4ef70dcf21c7.png" width="400">
 
 <br>
 Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정보갱신을 할 수 있습니다.
