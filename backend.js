@@ -54,8 +54,7 @@ button_search.addEventListener("click", () => {
 
     //html document element 만들고 추가
     let div = document.createElement("div");
-    div.className =
-        "d-flex-grow-1 align-items-center bg-light rounded-2 p-2 outer";
+    div.className = "d-flex align-items-center bg-light rounded-2 p-2 outer";
 
     let target = user_list[s_idx];
     let child = document.createElement("span");
