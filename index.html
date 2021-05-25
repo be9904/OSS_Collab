@@ -19,9 +19,11 @@
         <title>Stock Checker</title>
         <style>
             .container {
+                width: 800px;
+            }
+            .container_inner {
                 width: 720px;
             }
-          
         </style>
     </head>
     <body>
@@ -31,8 +33,9 @@
                 ><i class="bi bi-graph-up"></i> Stock Checker</span
             >
         </nav>
-      
-        <div class="d-flex align-items-center mb-2 mt-4 mx-5 px-5">
+        
+        <div class="container">
+        <div class="d-flex align-items-center mb-2 mt-4 "> 
             <input
                 type="text"
                 class="form-control"
@@ -42,13 +45,13 @@
             <button
                 type="button"
                 id="search"
-                class="btn btn-primary ms-1 me-5 text-nowrap"
+                class="btn btn-primary ms-1 me- text-nowrap"
             >
                 <i class="bi bi-search"></i> Search
             </button>
         </div>
-
-        <div class="container my-3 shadow bg-light rounded-3" id="info">
+    
+        <div class="container_inner my-3 shadow bg-light rounded-3 align-items-center"  id="info">
             <!-- search 했을 때 정보가 나오는 빈칸 container로 하긴 했는데 수정 가능 -->
         </div>
 
@@ -154,11 +157,10 @@
             </div>
           </div>
           <div class="flex-grow-1 bg-light rounded-2 mt-4" style = "text-align:center;">
-            오늘은 <label id ="hours">0</label>:<label id="minutes">00</label>:<label id="seconds">00</label> 동안이나 보고 계셨군요
+            <i class="bi bi-alarm"></i> 오늘은 <label id ="hours">0</label>:<label id="minutes">00</label>:<label id="seconds">00</label> 동안이나 보고 계셨군요
+            </div>
         </div>
         </div>
-  
-
         
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
