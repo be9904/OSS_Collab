@@ -79,7 +79,7 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 <!--정보갱신 부분사진-->
 <img src="https://user-images.githubusercontent.com/65922112/119497494-9b6d1880-bd9f-11eb-93a5-bdd3f4e4f90c.png" width="400">
 
-<img src="https://user-images.githubusercontent.com/65922112/119497520-a627ad80-bd9f-11eb-95fc-793845db2a28.png" width="600">
+<img src="https://user-images.githubusercontent.com/65922112/119497520-a627ad80-bd9f-11eb-95fc-793845db2a28.png" width="500">
 
 기존 사용자의 정보를 변경하고자 할 경우 위의 내용을 입력하고 추가하면 됩니다. 예를 들어 홍길동 사용자가 삼성전자 주식을 5주 추가로 매수했다면 차례대로 홍길동, 삼성전자, 5, 84000을 입력하면 되고, 반대로 5주를 매도했다면 홍길동, 삼성전자, -5, 87000을 입력하면 됩니다. 사용자의 정보를 삭제하고 싶을 때는 이름을 입력하고 '추가 매수량 또는 매도량'을 입력하는 부분에 0을 넣어주면 됩니다.
 
