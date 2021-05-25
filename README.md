@@ -6,10 +6,7 @@
 <br>
 Stock checker는 주식투자를 하고 있는 소프트웨어학과 학생들을 위해 최적화되어 있습니다. 소프트웨어학과 학생 여러분, 이젠 Stock checker를 활용하여 주식에 시간 낭비 하지 마시고 마음껏 여러분들의 과제에 집중하시기 바랍니다.
 
-
-
 <img src="https://user-images.githubusercontent.com/65922112/119496019-04539100-bd9e-11eb-9372-4268012e91c3.png" width="600">
-
 
 ### Quick Start
 
@@ -50,10 +47,7 @@ npm install -g oss-stockchecker
 stock <stockName> <yes/no>
 ```
 
-
 <img src="https://user-images.githubusercontent.com/65922112/119500964-5814a900-bda3-11eb-9905-f283c8271368.png" width="400">
-
-
 
 프로그램을 실행하면 해당 주식의 시세를 알아낼 수 있습니다. 여기서 yes를 입력하게 되면 Stock checker Web app이 열립니다.
 
@@ -62,7 +56,6 @@ stock <stockName> <yes/no>
 ```JS
 stock list
 ```
-
 
 <img src="https://user-images.githubusercontent.com/65922112/119500796-256ab080-bda3-11eb-9ca3-4ef70dcf21c7.png" width="400">
 
@@ -96,14 +89,11 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 
 <img src="https://user-images.githubusercontent.com/65922112/119497963-16ceca00-bda0-11eb-9d9e-b6eef03a355f.png" width="700">
 
-
 <!--저장되어 있는 정보를 조회한 사진-->
 
 #### 사진 2. 정보 삭제 후 다시 정보 조회
 
-
 <img src="https://user-images.githubusercontent.com/65922112/119498030-29490380-bda0-11eb-8018-16dd056e5c9d.png" width="400">
-
 
 <img src="https://user-images.githubusercontent.com/65922112/119498144-441b7800-bda0-11eb-8b1f-6dc2f797ee1b.png" width="700">
 <!--삭제 후 정보를 조회한 사진-->
@@ -114,7 +104,7 @@ https://youtu.be/OybW0K935mY
 
 # Release
 
-## oss-stockchecker 1.0.8
+## oss-stockchecker 1.0.9
 
 # How to contribute
 
