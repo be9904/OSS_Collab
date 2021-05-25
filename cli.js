@@ -106,11 +106,10 @@ https.get(
 
             let input = process.argv[2];
             if (process.argv[2] === "list") {
-                console.log("조회 가능한 종목 목록입니다.\n");
+                console.log("\n조회 가능한 종목 목록입니다.\n");
                 for (let i = 0; i < jsondata.result.itemList.length; i++) {
                     console.log(jsondata.result.itemList[i].nm);
                 }
-                console.log("\n");
             } else {
                 // 종목 검색
                 let index = search(
@@ -133,7 +132,7 @@ https.get(
                             "Stock Checker 홈페이지에 접속합니다. 잠시만 기다려주세요...\n"
                         );
                         setTimeout(() => {
-                            open("index3min.html"); // github pages link goes here
+                            open("index.html"); // github pages link goes here
                         }, 3000);
                     }
 
