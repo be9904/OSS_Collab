@@ -90,6 +90,10 @@ Web app에 접속하면 사용자의 정보조회, 정보추가, 그리고 정�
 <img src="https://user-images.githubusercontent.com/65922112/119487035-e08b4d80-bd93-11eb-840a-a4d75896f9a7.png" width="700">
 <!--삭제 후 정보를 조회한 사진-->
 
+### 시연 연상 링크
+
+https://youtu.be/OybW0K935mY
+
 # Release
 
 ## oss-stockchecker 1.0.8
